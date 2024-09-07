@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        int x_a,x_b,x_c,y_a,y_b,y_c;
+        cin>>x_a>>y_a;
+        cin>>x_b>>y_b;
+        cin>>x_c>>y_c;
+        int count=1;
+        if(x_b<=x_a && x_c<=x_a) count+=x_a-max(x_b,x_c);
+        else if(x_b>=x_a && x_c>=x_a) count+=min(x_b,x_c)-x_a;
+        if(y_b<=y_a && y_c<=y_a) count+=y_a-max(y_b,y_c);
+        else if(y_b>=y_a && y_c>=y_a) count+=min(y_b,y_c)-y_a;
+        cout<<count<<endl;
+    }
+}
