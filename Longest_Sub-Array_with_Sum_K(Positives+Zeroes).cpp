@@ -14,3 +14,4 @@ int lenOfLongSubarr(int A[],  int N, int K)
     }
     return maxlen;
 }
+//O(2N)
