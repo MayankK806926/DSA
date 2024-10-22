@@ -1,4 +1,4 @@
-//Binary Search
+//Binary Search  https://codeforces.com/contest/371/problem/C
 #include<bits/stdc++.h>
 using namespace std;
 int b=0,s=0,c=0;
