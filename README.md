@@ -6,3 +6,5 @@ Some more things:
 
 -> To handle the case of odd and even(int and float):
  int k=n/2+n%2;
+
+-> To avoid using both the cases of n%m==0 and m%n==0: if(m>n){ swap(s,t); swap(n,m); }
