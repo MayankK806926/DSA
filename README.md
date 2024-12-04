@@ -52,8 +52,10 @@ int main() {
 ```
 ---
 
-### 5.Subsequence & Subarray
+### 5. Subsequence and Subarray
+
 Subarray/substring defines the contiguous part of array/strin.
 Subsequence can be defined by deleting some or none of the elements without changing the order of the remaining elements.
+
 ---
 
