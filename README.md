@@ -59,3 +59,9 @@ Subsequence can be defined by deleting some or none of the elements without chan
 
 ---
 
+### 6. Sort() in STL
+
+The sort() function in STL has the nlog(n) Time Complexity.
+
+---
+
