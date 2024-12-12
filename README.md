@@ -65,3 +65,11 @@ The sort() function in STL has the nlog(n) Time Complexity.
 
 ---
 
+### 7. To handle the condition of odd and even or the case of perfect division.
+
+```cpp
+int gap = len/2 + len%2;
+```
+---
+
+
