@@ -84,3 +84,16 @@ getline(cin,s);
 ```
 ---
 
+### 9. stringstream() function.
+
+stringstream() function is used to iterate over each word of the string.
+```cpp
+string s;
+getline(cin, s);
+stringstream ss(s);
+string word, result;
+bool firstWord = true;
+while (ss >> word) {
+}
+```
+---
