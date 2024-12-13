@@ -72,4 +72,15 @@ int gap = len/2 + len%2;
 ```
 ---
 
+### 8. getline() function
+
+getline() is used for the input of a string only. If you are using getline() after using cin above, use cin.ignore(); to take all the inputs correctly.
+```cpp
+int t;
+cin>>t;
+cin.ignore();
+string s;
+getline(cin,s);
+```
+---
 
