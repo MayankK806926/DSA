@@ -97,3 +97,22 @@ while (ss >> word) {
 }
 ```
 ---
+
+### 10. Modular Exponentiation by Squaring Method.
+
+TC-> O(log exp) and SC-> O(1).
+```cpp
+ll mod_exp(ll base, ll exp, ll mod) {
+    ll result = 1;
+    while (exp > 0) {
+        if (exp % 2 == 1) { // If exp is odd
+            result = (result * base) % mod;
+        }
+        base = (base * base) % mod; // Square the base
+        exp /= 2; // Halve the exponent
+    }
+    return result;
+}
+```
+---
+
