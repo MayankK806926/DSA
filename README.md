@@ -116,3 +116,9 @@ ll mod_exp(ll base, ll exp, ll mod) {
 ```
 ---
 
+### 11. Some common T.C.
+
+The time complexity of initalizing a vector of size n with a value of x in C++ is O(n) and the space complexity is also O(n).
+
+---
+
