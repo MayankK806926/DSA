@@ -42,3 +42,8 @@ n/2 <==> n>>1;
 
 //To get the number with only rightmost set digit is left.
 n=(n&n-1)^n;
+
+//To check the highest power of 2 which divides n.
+int highestPowerOf2Bitwise(int n) {
+    return __builtin_ctz(n);
+}
