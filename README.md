@@ -119,6 +119,7 @@ ll mod_exp(ll base, ll exp, ll mod) {
 ### 11. Some common T.C.
 
 The time complexity of initalizing a vector of size n with a value of x in C++ is O(n) and the space complexity is also O(n).
+Operations on the map (mpp.find(sum) and mpp[sum] = i) are 𝑂(log𝑛) on average because the map is implemented as a balanced binary search tree (e.g., std::map in C++).
 
 ---
 
