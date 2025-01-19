@@ -31,11 +31,15 @@ else return false;
 //To count the number of set bits.
 // Convert_to_binary & check the number of 1's(by if(n&1==1) cnt++;)
 or
-int n=__builtin_popcount()
+int cnt=__builtin_popcount(n)//only for int & for ll->__builtin_popcountll(n)
 or
 while(N!=0){//T.C. =>O(No. of set bits)
     cnt++;
     N=N&N-1;
+}
+or
+for(int i=31;i>=0;--i){
+    cnt+=((n>>i) & 1);
 }
 
 n/2 <==> n>>1;
