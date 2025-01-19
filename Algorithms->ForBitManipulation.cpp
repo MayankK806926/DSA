@@ -15,7 +15,7 @@ else return false;
 //To set the ith bit.
 return N | (i<<i);
 
-//To clear the ith bit.
+//To unset/clear the ith bit.
 return (N & ~(1<<i));
 
 //To toggle or switch the ith bit.
