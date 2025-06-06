@@ -1,5 +1,5 @@
 class Solution {
-  public:
+  public://TC->O(3*(V+E)) && SC-> O(V+E)
     void dfs(int node,vector<int> &vis,vector<vector<int>> &adj,stack<int>& st){
         vis[node]=1;
         for(auto& it:adj[node]){
