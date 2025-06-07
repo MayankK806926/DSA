@@ -1,4 +1,4 @@
-class Solution {
+class Solution {//TC->O(E log E) && SC->O(E)
   public:
     // Function to find sum of weights of edges of the Minimum Spanning Tree.
     int spanningTree(int V, vector<vector<int>> adj[]) {
