@@ -33,7 +33,7 @@ public:
     }
   }
 
-  void unionBySIze(int u,int v){
+  void unionBySize(int u,int v){
     int ulp_u=findUParent(u);
     int ulp_v=findUParent(v);
     if(ulp_u == ulp_v) return;
@@ -55,14 +55,14 @@ int main() {
     ds.unionBySize(6, 7);
     ds.unionBySize(5, 6);
     // if 3 and 7 same or not
-    if (ds.findUPar(3) == ds.findUPar(7)) {
+    if (ds.findUParent(3) == ds.findUParent(7)) {
         cout << "Same\n";
     }
     else cout << "Not same\n";
 
     ds.unionBySize(3, 7);
 
-    if (ds.findUPar(3) == ds.findUPar(7)) {
+    if (ds.findUParent(3) == ds.findUParent(7)) {
         cout << "Same\n";
     }
     else cout << "Not same\n";
