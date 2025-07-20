@@ -61,7 +61,7 @@ Subsequence can be defined by deleting some or none of the elements without chan
 
 ### 6. Sort() in STL
 
-The sort() function in STL has the nlog(n) Time Complexity.
+The sort() function in STL has the nlog(n) Time Complexity. It is uses Quick Sort, Heap Sort & Insertion Sort.
 
 ---
 
