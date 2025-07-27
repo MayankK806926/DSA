@@ -1,4 +1,4 @@
-C++
+//C++
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -32,7 +32,8 @@ int main(){
     }
 }
 
-Python
+// Python
+/*
 def s_del(s):
     stack = []
     for char in s:
@@ -44,3 +45,4 @@ def s_del(s):
 n=int(input())
 s=str(input())
 print(s_del(s))
+*/
