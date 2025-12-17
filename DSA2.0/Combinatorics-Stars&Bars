@@ -1,0 +1,105 @@
+**Stars and Bars** is a powerful mathematical technique used in combinatorics to solve problems regarding the grouping of identical objects into labeled boxes. It is particularly useful for finding the number of solutions to linear Diophantine equations.
+
+### 1. The General Theorem (Non-negative Integers)
+
+The most common application is counting the number of ways to put n identical objects into k labeled boxes. This is equivalent to finding the number of solutions to the equation:
+
+Subject to the constraint:
+
+
+#### The Formula
+
+The number of ways to distribute these objects is given by the binomial coefficient:
+
+#### Explanation
+
+We can visualize this by arranging n stars (objects) and separating them with k-1 bars (dividers).
+
+* **Example:** If n=5 objects and k=4 boxes, the solution corresponding to 1 + 2 + 0 + 2 = 5 can be represented as:
+
+
+* Any permutation of these n stars and k-1 bars represents a unique solution.
+
+---
+
+### 2. Positive Integer Sums
+
+Sometimes, the problem requires that every box must contain at least one object (no empty boxes allowed).
+
+Consider the solutions to:
+
+
+Subject to the constraint:
+
+
+#### The Approach
+
+Imagine n stars lined up. To divide them into k groups where each group has at least one star, we can only place bars in the "gaps" between the stars.
+
+* There are n stars, so there are n-1 gaps between them.
+* We need to place k-1 bars into these gaps.
+* We can place at most *one* bar per gap (otherwise, we would create an empty group).
+
+#### The Formula
+
+The number of solutions is:
+
+---
+
+### 3. Lower-Bound Integer Sums (General Case)
+
+This method can be extended to cases where each variable has a specific minimum value different from 0 or 1.
+
+Consider the equation:
+
+
+Subject to the constraint:
+
+
+#### The Approach
+
+We can reduce this to the standard non-negative case using substitution.
+
+1. Define a new variable: x'_i = x_i - a_i.
+2. This implies x'_i \ge 0.
+3. Substitute x_i = x'_i + a_i back into the original equation:
+
+Rearranging the terms:
+
+
+#### The Formula
+
+Let the new sum be n' = n - \sum a_i. We can now apply the standard stars and bars theorem (Case 1) using n':
+
+> **Note:** For problems involving **upper bounds** (e.g., x_i \le 5), the Stars and Bars method must be combined with the **Inclusion-Exclusion Principle**.
+
+---
+
+### Implementation Example (Python)
+
+```python
+import math
+
+def stars_and_bars(n, k, min_val=0):
+    """
+    Calculates the number of ways to sum to n using k variables,
+    where each variable is >= min_val.
+    """
+    # Adjust n based on the lower bound
+    effective_n = n - (k * min_val)
+    
+    if effective_n < 0:
+        return 0
+        
+    # Apply standard formula: (n + k - 1) choose (k - 1)
+    return math.comb(effective_n + k - 1, k - 1)
+
+# Example: n=10, k=3, non-negative (x >= 0)
+print(f"Non-negative solutions: {stars_and_bars(10, 3, 0)}")
+
+# Example: n=10, k=3, positive (x >= 1)
+print(f"Positive solutions: {stars_and_bars(10, 3, 1)}")
+
+```
+
+---
